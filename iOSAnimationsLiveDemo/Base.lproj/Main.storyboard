@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fmi-mH-Avo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="H0k-tW-9ht">
+            <objects>
+                <viewController id="ddL-sT-v6E" customClass="FlappyDragonViewController" customModule="iOSAnimationsLiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yVB-IO-UZJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iC1-FW-jag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCS-38-uRb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LGD-Ld-eHU"/>
+                    <navigationItem key="navigationItem" id="ztx-KK-KSa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PLk-m3-ojx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="701"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yM7-6Q-vl4">
+            <objects>
+                <tabBarController id="fmi-mH-Avo" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eoS-LU-qRi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gwV-gi-dGL" kind="relationship" relationship="viewControllers" id="Vx2-Rb-Bqv"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="3c3-1v-77F"/>
+                        <segue destination="ddL-sT-v6E" kind="relationship" relationship="viewControllers" id="41P-tQ-TUj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQv-Kp-J5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1861" y="-712"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="YRj-tB-xfj">
+            <objects>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="sfg-BK-dEq">
+                    <connections>
+                        <action selector="pan:" destination="gwV-gi-dGL" id="wHS-Kz-fl9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSO-Uq-TrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gwV-gi-dGL" customClass="AnimationsViewController" customModule="iOSAnimationsLiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gF7-gY-NyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="JbY-sV-P6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FUv-xS-zJH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sfg-BK-dEq" appends="YES" id="6N7-bZ-paW"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6Nh-8M-Efo"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-813" y="-8"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="iOSAnimationsLiveDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AgD-It-n6p" appends="YES" id="qEw-o3-Ejl"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="UvS-Q5-iHt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="AgD-It-n6p">
+                    <connections>
+                        <action selector="pan:" destination="vXZ-lx-hvc" id="t15-sQ-XgO"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-187" y="-124"/>
+        </scene>
+    </scenes>
+</document>
